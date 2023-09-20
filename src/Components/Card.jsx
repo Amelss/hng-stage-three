@@ -86,31 +86,33 @@ export default function Card() {
 
 
  return (
-   <div className="text-center mx-auto">
-     <GridLayout
-       className="mx-auto "
-       layout={photos.map((_, index) => ({
-         i: `${index}`,
-         x: index % 2, // Place items in columns
-         y: Math.floor(index / 2), // Place items in rows
-         w: 1, // Adjust item width as needed
-         h: 1, // Adjust item height as needed
-       }))}
-       cols={2} // Set the number of columns here
-       rowHeight={200} // Adjust the row height as needed
-       width={800} // Adjust the width as needed
-       onLayoutChange={onLayoutChange}
-     >
-       {photos.map((photo, index) => (
-         <div key={`${index}`} className="">
-           <img
-             src={photo.urls?.small || ""}
-             alt="image"
-             className="w-[300px] h-[200px] md:w-full md:h-full object-cover"
-           />
-         </div>
-       ))}
-     </GridLayout>
+   <div className="text-center">
+     <div style={{ display: "inline-block" }}>
+       <GridLayout
+         className="mx-auto -ml-96 "
+         layout={photos.map((_, index) => ({
+           i: `${index}`,
+           x: index % 2, // Place items in columns
+           y: Math.floor(index / 2), // Place items in rows
+           w: 1, // Adjust item width as needed
+           h: 1, // Adjust item height as needed
+         }))}
+         cols={2} // Set the number of columns here
+         rowHeight={200} // Adjust the row height as needed
+         width={800} // Adjust the width as needed
+         onLayoutChange={onLayoutChange}
+       >
+         {photos.map((photo, index) => (
+           <div key={`${index}`} className="">
+             <img
+               src={photo.urls?.small || ""}
+               alt="image"
+               className="w-[300px] h-[200px] md:w-full md:h-full object-cover"
+             />
+           </div>
+         ))}
+       </GridLayout>
+     </div>
    </div>
  );
 }
