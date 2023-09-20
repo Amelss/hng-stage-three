@@ -1,12 +1,20 @@
-import Card from "./Components/Card"
+import Header from "./Components/Header"
+import Footer from "./Components/Footer"
+import ImageLibrary from "./Components/ImageLibrary"
+import SearchResultsPage from "./Components/SearchResultsPage"
+import { Route, Routes } from "react-router-dom"
 
 function App() {
 
 
   return (
     <>
-      <h1 className="text-green-500">Hello</h1>
-      <Card />
+      <Header />
+      <Routes>
+        <Route path={"/"} element={<ImageLibrary />} />
+       <Route path={"/search-results"} element={<SearchResultsPage />} />
+      </Routes>
+      <Footer />
     </>
   )
 }
