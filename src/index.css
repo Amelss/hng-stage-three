@@ -4,6 +4,9 @@
 @tailwind utilities;
 
 
+.image-app{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 .skeleton {
   display: inline-block;

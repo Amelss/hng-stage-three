@@ -26,7 +26,7 @@ export default function Signin() {
    
   };
   return (
-    <div className="text-center bg-orange-200 h-screen">
+    <div className="text-center bg-stone-100 h-screen">
       <h1 className="text-pink-500 text-3xl py-10">Verve Image Gallery</h1>
       <form onSubmit={signIn}>
         <h1 className="pb-4">Please Sign In...</h1>

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState} from "react";
-import { useParams } from "react-router-dom";
+
 import GridLayout from "react-grid-layout";
 import "react-grid-layout/css/styles.css";
 import "react-resizable/css/styles.css";
@@ -8,7 +8,7 @@ import "react-resizable/css/styles.css";
 
 export default function Card() {
   const [photos, setPhotos] = useState([]);
-  const { id } = useParams();
+
   const [isLoading, setIsLoading] = useState(true); // Loading state
 
  const getPhotos = async () => {

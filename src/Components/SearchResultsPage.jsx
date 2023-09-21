@@ -34,7 +34,7 @@ const getWidthForScreenSize = () => {
 };
 
 return (
-  <div className="">
+  <div className="bg-stone-100 max-h-screen">
     <Header />
 
     <h2 className="text-center py-5 text-xl">Search Results:</h2>
@@ -66,7 +66,7 @@ return (
                 alt={result.alt_description}
                 className="w-[300px] h-[200px] md:w-full md:h-full object-cover py-7 md:py-10 text-center mx-auto"
               />
-              <p className="border-2 border-pink-400 rounded-full px-2 text-xs w-20 text-center my-4">
+              <p className="border-2 border-pink-400 rounded-full px-2 text-xs w-24 text-center my-4">
                 {result.tags.length > 0 ? result.tags[0].title : "No tags"}
               </p>
             </div>

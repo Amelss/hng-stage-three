@@ -63,11 +63,11 @@ export default function Search() {
           onChange={handleInputChange}
           onKeyDown={handleKeyPress}
           placeholder="Search Anything..."
-          className="border-2 border-pink-500 md:w-96 rounded-lg pr-10 pl-3 py-1"
+          className="border-2 border-orange-300 md:w-96 rounded-lg pr-10 pl-3 py-1"
         />
         {/* Button that triggers the navigation */}
         <button
-          className="ml-3 bg-pink-500 px-3 py-1 rounded-lg text-white"
+          className="ml-3 bg-orange-300 px-3 py-1 rounded-lg text-white"
           onClick={handleSearchButtonClick}
         >
           Search
