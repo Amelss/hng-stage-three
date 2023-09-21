@@ -709,6 +709,11 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -764,8 +769,17 @@ video {
 /* Inside your component's CSS or in a separate CSS file */
 
 @media (min-width: 768px) {
+  .md\:my-10 {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
   .md\:-ml-96 {
     margin-left: -24rem;
+  }
+
+  .md\:-ml-80 {
+    margin-left: -20rem;
   }
 
   .md\:h-full {
@@ -782,6 +796,20 @@ video {
 
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .md\:py-7 {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .md\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .md\:text-center {
+    text-align: center;
   }
 
   .md\:text-6xl {
