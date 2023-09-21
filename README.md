@@ -27,7 +27,7 @@ You should have a search field that filters the image list based on the tags add
 - User-friendly Feedback:
 Incorporate smooth animations and visual cues that provide feedback during drag and drop interactions.
 
-#### Responsive Design:
+#### Responsive Design:
 - Ensure that the gallery is responsive and functions seamlessly on different devices, including mobile phones, tablets, and desktops.
 - Design Flexibility:
 While adhering to the above requirements, you have the creative freedom to come up with a unique and appealing design.
