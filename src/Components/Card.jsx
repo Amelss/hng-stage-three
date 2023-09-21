@@ -11,7 +11,6 @@ import "react-resizable/css/styles.css";
 
 
 export default function Card() {
-  const apiKey = import.meta.env.VITE_API_KEY;
   const [photos, setPhotos] = useState([]);
   const { id } = useParams();
 

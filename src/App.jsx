@@ -8,7 +8,7 @@ import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <div className="image-app">
 
       <Routes>
 
@@ -17,7 +17,7 @@ function App() {
         <Route path={"/search-results"} element={<SearchResultsPage />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 

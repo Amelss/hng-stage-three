@@ -702,6 +702,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-pink-500 {
+  --tw-text-opacity: 1;
+  color: rgb(236 72 153 / var(--tw-text-opacity));
+}
+
 /* Card.css */
 
 .grid-container {
@@ -710,6 +715,10 @@ video {
   /* 5 columns for large screens */
   gap: 1rem;
   padding: 1rem;
+}
+
+.image-app{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 @media (max-width: 768px) {

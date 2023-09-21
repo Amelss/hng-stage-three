@@ -4,7 +4,6 @@ import axios from "axios";
 
 export default function Search() {
   const [search, setSearch] = useState("");
-  const apiKey = import.meta.env.VITE_API_KEY;
   const query = search;
   const [searchResults, setSearchResults] = useState([]);
   const navigate = useNavigate(); // Initialize useNavigate
@@ -12,7 +11,7 @@ export default function Search() {
   const getSearch = async () => {
     try {
       const response = await axios.get(
-        `https://api.unsplash.com/search/photos?query=${query}&client_id=${apiKey}`
+        `https://api.unsplash.com/search/photos?query=${query}&client_id=S1cxIj1tN-b1dhGC_sbKViumMipvBRv53qT8RrEtfP8`
       );
       setSearchResults(response.data.results);
     } catch (error) {
@@ -33,7 +32,7 @@ export default function Search() {
  const handleSearchButtonClick = async () => {
    try {
      const response = await axios.get(
-       `https://api.unsplash.com/search/photos?query=${query}&client_id=${apiKey}`
+       `https://api.unsplash.com/search/photos?query=${query}&client_id=S1cxIj1tN-b1dhGC_sbKViumMipvBRv53qT8RrEtfP8`
      );
 
      // Pass the search results data to the "SearchResultsPage" route
