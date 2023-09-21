@@ -34,13 +34,7 @@ export default function Card() {
     // getMockPhotos();
   }, []);
 
-  // }
 
-  // function onChange(sourceId, sourceIndex, targetIndex) {
-  //   const nextState = swap(photos, sourceIndex, targetIndex);
-  //   setPhotos(nextState);
-  // }
-  const imageKeysRef = useRef({});
   
 
  const handlePhotoOrderChange = (draggedPhoto, updatedOrder) => {
@@ -99,7 +93,7 @@ export default function Card() {
            h: 1, // Adjust item height as needed
          }))}
          cols={2} // Set the number of columns here
-         rowHeight={200} // Adjust the row height as needed
+         rowHeight={250} // Adjust the row height as needed
          width={800} // Adjust the width as needed
          onLayoutChange={onLayoutChange}
        >
@@ -108,8 +102,9 @@ export default function Card() {
              <img
                src={photo.urls?.small || ""}
                alt="image"
-               className="w-[300px] h-[200px] md:w-full md:h-full object-cover"
+               className="w-[300px] h-[200px] md:w-full md:h-full object-cover py-4"
              />
+             <p className="text-xs text-center -ml-80 pb-4">{photo.alt_description }</p>
            </div>
          ))}
        </GridLayout>

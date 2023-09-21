@@ -572,6 +572,14 @@ video {
   margin-top: 0.5rem;
 }
 
+.-ml-80 {
+  margin-left: -20rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -689,6 +697,16 @@ video {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-10 {
