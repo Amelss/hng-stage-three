@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 import axios from "axios";
 
+
 export default function Search() {
   const [search, setSearch] = useState("");
   const query = search;

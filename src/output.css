@@ -580,6 +580,14 @@ video {
   margin-top: 0.75rem;
 }
 
+.ml-44 {
+  margin-left: 11rem;
+}
+
+.ml-20 {
+  margin-left: 5rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -606,6 +614,10 @@ video {
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.resize {
+  resize: both;
 }
 
 .grid-cols-2 {
@@ -780,6 +792,10 @@ video {
 
   .md\:-ml-80 {
     margin-left: -20rem;
+  }
+
+  .md\:ml-0 {
+    margin-left: 0px;
   }
 
   .md\:h-full {
