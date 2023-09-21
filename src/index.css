@@ -7,32 +7,7 @@
 
 /* Card.css */
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 columns for large screens */
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.image-app{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-@media (max-width: 768px) {
-  /* On screens with a max width of 768px (adjust as needed for your breakpoint), switch to 2 columns */
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+/* Inside your component's CSS or in a separate CSS file */
 
 
-.App {
-  font-family: sans-serif;
-  text-align: center;
-}
 
-.griditemUI {
-  background-color: #949c9c;
-  border: 2px solid #fff;
-  line-height: 100px;
-}

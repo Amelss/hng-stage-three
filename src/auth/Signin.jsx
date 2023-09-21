@@ -3,10 +3,13 @@ import { useState } from "react"
 import { auth } from "../firebase.js"
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 
+
 export default function Signin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate(); // Ini
+  const [error, setError] = useState(null); // State for error message
+
 
   const signIn = (e) => {
     e.preventDefault();
@@ -16,15 +19,17 @@ export default function Signin() {
         navigate("/image-library");
       })
       .catch((err) => {
+        setError('Your email and/or password is not correct');
         console.log(err);
       });
 
    
   };
   return (
-    <div className="">
+    <div className="text-center bg-orange-200 h-screen">
+      <h1 className="text-pink-500 text-3xl py-10">Verve Image Gallery</h1>
       <form onSubmit={signIn}>
-        <h1>Sign In</h1>
+        <h1 className="pb-4">Please Sign In...</h1>
         <input
           type="email"
           name="email"
@@ -32,7 +37,7 @@ export default function Signin() {
           placeholder="Enter Your Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="border-2 border-pink-300 rounded-full"
+          className="border-2 border-pink-300 rounded-full pr-10 px-2 mb-4 py-1"
         />
         <br />
         <input
@@ -42,10 +47,15 @@ export default function Signin() {
           placeholder="Enter Your Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="border-2 border-pink-300 rounded-full"
+          className="border-2 border-pink-300 rounded-full pr-10 px-2 py-1"
         />
         <br />
-        <button className="bg-pink-300">Sign In</button>
+        <button className="bg-pink-300 mt-4 px-3 text-white rounded-full">
+          Sign In
+        </button>
+        {error && (
+          <p className="text-red-500 mt-2">{error}</p> // Display error message
+        )}
       </form>
     </div>
   );
