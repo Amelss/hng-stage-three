@@ -17,7 +17,7 @@ export default function Card() {
   const getPhotos = async () => {
     await axios
       .get(
-        `https://api.unsplash.com/photos?page=1&w=200&client_id=S1cxIj1tN-b1dhGC_sbKViumMipvBRv53qT8RrEtfP8`
+        `https://api.unsplash.com/photos?page=1&per_page=12&w=200&client_id=S1cxIj1tN-b1dhGC_sbKViumMipvBRv53qT8RrEtfP8`
       )
       .then((res) => {
         setPhotos(res.data);
