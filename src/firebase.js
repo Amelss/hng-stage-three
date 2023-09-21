@@ -4,7 +4,7 @@ import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  apiKey: "AIzaSyBKZnk1Ste0Smc_SQQSM100qNvx7SqVIbs",
   authDomain: "react-auth-a834b.firebaseapp.com",
   projectId: "react-auth-a834b",
   storageBucket: "react-auth-a834b.appspot.com",
