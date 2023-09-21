@@ -37,11 +37,22 @@ return (
     <Header />
 
     <h2 className="text-center py-5 text-xl">Search Results:</h2>
-   <Link to={"/image-library"}> <p className="text-center text-xs">Home</p></Link>
-    <div className="ml-20 md:ml-0 flex">
-      <div >
+    <Link to={"/image-library"}>
+      {" "}
+      <p className="text-center text-xs">Home</p>
+    </Link>
+    <div className="md:text-center">
+      <div className="">
         <GridLayout
-          className="layout flex"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            "@media (max-width: 768px)": {
+              display: "block", // Reset styles for smaller screens
+          
+            },
+          }}
+          className="layout"
           layout={searchResults.map((_, index) => ({
             i: `${index}`,
             x: index % getColsForScreenSize(),
@@ -50,15 +61,15 @@ return (
             h: 1,
           }))}
           cols={getColsForScreenSize()}
-          rowHeight={220}
+          rowHeight={250}
           width={getWidthForScreenSize()} // Dynamically adjust width
           onLayoutChange={onLayoutChange}
         >
-        
           {searchResults.map((result, index) => (
             <div
               key={`${index}`}
-              data-grid={{ i: `${index}`, x: 0, y: 0, w: 1, h: 1 }} className=""
+              data-grid={{ i: `${index}`, x: 0, y: 0, w: 1, h: 1 }}
+              className=""
             >
               <img
                 src={result.urls.small}

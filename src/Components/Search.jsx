@@ -9,7 +9,9 @@ export default function Search() {
   const [searchResults, setSearchResults] = useState([]);
   const navigate = useNavigate(); // Initialize useNavigate
 
+
   const getSearch = async () => {
+
     try {
       const response = await axios.get(
         `https://api.unsplash.com/search/photos?query=${query}&client_id=S1cxIj1tN-b1dhGC_sbKViumMipvBRv53qT8RrEtfP8`
@@ -17,7 +19,7 @@ export default function Search() {
       setSearchResults(response.data.results);
     } catch (error) {
       console.log(error);
-    }
+    } 
   };
 
   useEffect(() => {
@@ -28,23 +30,21 @@ export default function Search() {
     setSearch(e.target.value);
   };
 
+  const handleSearchButtonClick = async () => {
+    try {
+      const response = await axios.get(
+        `https://api.unsplash.com/search/photos?query=${query}&client_id=S1cxIj1tN-b1dhGC_sbKViumMipvBRv53qT8RrEtfP8`
+      );
 
+      // Pass the search results data to the "SearchResultsPage" route
+      navigate(`/search-results?query=${query}`, {
+        state: { searchResults: response.data.results },
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
- const handleSearchButtonClick = async () => {
-   try {
-     const response = await axios.get(
-       `https://api.unsplash.com/search/photos?query=${query}&client_id=S1cxIj1tN-b1dhGC_sbKViumMipvBRv53qT8RrEtfP8`
-     );
-
-     // Pass the search results data to the "SearchResultsPage" route
-     navigate(`/search-results?query=${query}`, {
-       state: { searchResults: response.data.results },
-     });
-   } catch (error) {
-     console.log(error);
-   }
- };
-    
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       // When Enter key is pressed, trigger the search
@@ -52,8 +52,11 @@ export default function Search() {
     }
   };
 
+   
+
   return (
     <div>
+      
       <div className="pb-10 text-center">
         <input
           type="text"
@@ -77,8 +80,12 @@ export default function Search() {
         <div>
           <ul>
             {searchResults.map((result) => (
-              <li key={result.id} >
-                <img src={result.urls.small} alt={result.alt_description} className="bg-gray-300" />
+              <li key={result.id}>
+                <img
+                  src={result.urls.small}
+                  alt={result.alt_description}
+                  className="bg-gray-300"
+                />
                 <p>{result.description}</p>
               </li>
             ))}

@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useEffect, useState} from "react";
-
 import GridLayout from "react-grid-layout";
 import "react-grid-layout/css/styles.css";
 import "react-resizable/css/styles.css";
@@ -12,7 +11,7 @@ export default function Card() {
   const [isLoading, setIsLoading] = useState(true); // Loading state
 
  const getPhotos = async () => {
-   setIsLoading(true); // Set loading to true while fetching data
+   setIsLoading(true); 
    try {
      const res = await axios.get(
        `https://api.unsplash.com/photos?page=1&per_page=12&w=200&client_id=S1cxIj1tN-b1dhGC_sbKViumMipvBRv53qT8RrEtfP8`
@@ -21,7 +20,7 @@ export default function Card() {
    } catch (err) {
      console.log(err);
    } finally {
-     setIsLoading(false); // Set loading to false when data is fetched
+     setIsLoading(false); 
    }
  };
 
