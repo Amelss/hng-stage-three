@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useState } from "react";
 import Header from "./Header";
 import GridLayout from "react-grid-layout";
@@ -38,6 +38,7 @@ return (
     <Header />
 
     <h2 className="text-center py-5 text-xl">Search Results:</h2>
+   <Link to={"/image-library"}> <p className="text-center text-xs">Home</p></Link>
     <div className="ml-20 md:ml-0 flex">
       <div >
         <GridLayout
