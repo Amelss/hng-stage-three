@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import Header from "./Header";
 
 export default function SearchResultsPage() {
   const location = useLocation();
@@ -6,6 +7,7 @@ export default function SearchResultsPage() {
 
   return (
     <div>
+      <Header />
       <h2 className="text-center py-5 text-xl">Search Results:</h2>
       <div>
         <ul className="grid grid-cols-2 md:grid-cols-4">
