@@ -8,7 +8,7 @@ import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="image-app bg-stone-100 pb-10">
+    <div className="image-app bg-stone-100 pb-10 font-inclusive">
 
       <Routes>
 

@@ -19,17 +19,17 @@ export default function Signin() {
         navigate("/image-library");
       })
       .catch((err) => {
-        setError('Your email and/or password is not correct');
+        setError('Your email and/or password is not correct.');
         console.log(err);
       });
 
    
   };
   return (
-    <div className="text-center bg-stone-100 h-screen">
+    <div className="text-center bg-stone-100 h-screen font-inclusive">
       <h1 className="text-orange-300 text-3xl py-10">Verve Image Gallery</h1>
-      <form onSubmit={signIn} className="bg-white w-max  mx-auto px-4 py-6 rounded-xl md:px-10 md:py-10">
-        <h1 className="pb-4">Please Sign In</h1>
+      <form onSubmit={signIn} className="bg-white w-max  mx-auto px-10 py-10 rounded-xl md:px-10 md:py-10">
+        <h1 className="pb-4 text-orange-300">Please Sign In</h1>
         <input
           type="email"
           name="email"
@@ -54,7 +54,7 @@ export default function Signin() {
           Sign In
         </button>
         {error && (
-          <p className="text-red-500 mt-2">{error}</p> // Display error message
+          <p className="text-red-500 mt-2 text-xs">{error}</p> // Display error message
         )}
       </form>
     </div>

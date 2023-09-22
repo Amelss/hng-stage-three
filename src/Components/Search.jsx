@@ -57,7 +57,7 @@ export default function Search() {
   return (
     <div>
       
-      <div className="pb-10 text-center">
+      <div className="pb-10 text-center font-inclusive">
         <input
           type="text"
           name="query"
@@ -66,7 +66,7 @@ export default function Search() {
           onChange={handleInputChange}
           onKeyDown={handleKeyPress}
           placeholder="Search Anything..."
-          className="border-2 border-orange-300 md:w-96 rounded-lg pr-10 pl-3 py-1"
+          className="border-2 border-orange-300 md:w-96 rounded-lg pr-10 pl-3 py-1 placeholder:font-inclusive"
         />
         {/* Button that triggers the navigation */}
         <button
