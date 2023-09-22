@@ -28,8 +28,8 @@ export default function Signin() {
   return (
     <div className="text-center bg-stone-100 h-screen">
       <h1 className="text-orange-300 text-3xl py-10">Verve Image Gallery</h1>
-      <form onSubmit={signIn}>
-        <h1 className="pb-4">Please Sign In...</h1>
+      <form onSubmit={signIn} className="bg-white w-max  mx-auto px-4 py-6 rounded-xl md:px-10 md:py-10">
+        <h1 className="pb-4">Please Sign In</h1>
         <input
           type="email"
           name="email"
@@ -37,7 +37,7 @@ export default function Signin() {
           placeholder="Enter Your Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="border-2 border-orange-300 rounded-full pr-10 px-2 mb-4 py-1"
+          className="border-2 border-orange-300 rounded-full pr-10 px-2 mb-4 py-1 placeholder:text-xs "
         />
         <br />
         <input
@@ -47,10 +47,10 @@ export default function Signin() {
           placeholder="Enter Your Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="border-2 border-orange-300 rounded-full pr-10 px-2 py-1"
+          className="border-2 border-orange-300 rounded-full pr-10 px-2 py-1 placeholder:text-xs"
         />
         <br />
-        <button className="bg-orange-300 mt-4 px-3 text-white text-sm rounded-full">
+        <button className="bg-orange-300 mt-4 py-1 px-6 text-white text-sm rounded-full">
           Sign In
         </button>
         {error && (
